@@ -5,4 +5,5 @@ program   : INICIO statement+ FIN;
           
 statement : print ;
 
-print     : PRINT '('INT')';
+print     : PRINT '('(NUMERO)')';
+
