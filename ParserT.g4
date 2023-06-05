@@ -5,5 +5,6 @@ program   : INICIO statement+ FIN;
           
 statement : print ;
 
-print     : PRINT '('(NUMERO)')';
+
+print     : PRINT '('(ECUACIONES | NUMERO)')';
 

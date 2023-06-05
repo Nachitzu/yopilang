@@ -16,21 +16,22 @@ public class ParserTParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__1=1, T__0=2, NUMERO=3, FLOAT=4, INT=5, DIGITO=6, SUMA=7, RESTA=8, MULTIPLICACION=9, 
-		DIVISION=10, IGUAL=11, SENO=12, COSENO=13, RAIZ_CUADRADA=14, INICIO=15, 
-		FIN=16, PRINT=17, A=18, B=19, C=20, D=21, E=22, F=23, G=24, H=25, I=26, 
-		J=27, K=28, L=29, M=30, N=31, O=32, P=33, Q=34, R=35, S=36, T=37, U=38, 
-		V=39, W=40, X=41, Y=42, Z=43, NUM_0=44, NUM_1=45, NUM_2=46, NUM_3=47, 
-		NUM_4=48, NUM_5=49, NUM_6=50, NUM_7=51, NUM_8=52, NUM_9=53, WS=54;
+		T__1=1, T__0=2, ECUACIONES=3, OPERACION=4, NUMERO=5, FLOAT=6, INT=7, DIGITO=8, 
+		SUMA=9, RESTA=10, MULTIPLICACION=11, DIVISION=12, IGUAL=13, SENO=14, COSENO=15, 
+		RAIZ_CUADRADA=16, INICIO=17, FIN=18, PRINT=19, A=20, B=21, C=22, D=23, 
+		E=24, F=25, G=26, H=27, I=28, J=29, K=30, L=31, M=32, N=33, O=34, P=35, 
+		Q=36, R=37, S=38, T=39, U=40, V=41, W=42, X=43, Y=44, Z=45, NUM_0=46, 
+		NUM_1=47, NUM_2=48, NUM_3=49, NUM_4=50, NUM_5=51, NUM_6=52, NUM_7=53, 
+		NUM_8=54, NUM_9=55, WS=56;
 	public static final String[] tokenNames = {
-		"<INVALID>", "'('", "')'", "NUMERO", "FLOAT", "INT", "DIGITO", "'Kryst'", 
-		"'Skorn'", "'Thryp'", "'Xynth'", "'Synt'", "'Xyrt'", "'Zynt'", "'Klaxyx'", 
-		"'Xylok'", "'Zynd'", "'Plork'", "'Zir'", "'Kryt'", "'Vok'", "'Thun'", 
-		"'Pryx'", "'Glix'", "'Zolk'", "'Qwert'", "'Blit'", "'Nyr'", "'Xyr'", "'Jyx'", 
-		"'Zyn'", "'Plor'", "'Flum'", "'Trax'", "'Zyx'", "'Glork'", "'Drax'", "'Skron'", 
-		"'Yttr'", "'Zarg'", "'Plux'", "'Mox'", "'Grat'", "'Krygn'", "'Zor'", "'Plip'", 
-		"'Blip'", "'Glip'", "'Flap'", "'Klix'", "'Vip'", "'Zinx'", "'Drox'", "'Grax'", 
-		"WS"
+		"<INVALID>", "'('", "')'", "ECUACIONES", "OPERACION", "NUMERO", "FLOAT", 
+		"INT", "DIGITO", "'Kryst'", "'Skorn'", "'Thryp'", "'Xynth'", "'Synt'", 
+		"'Xyrt'", "'Zynt'", "'Klaxyx'", "'Xylok'", "'Zynd'", "'Plork'", "'Zir'", 
+		"'Kryt'", "'Vok'", "'Thun'", "'Pryx'", "'Glix'", "'Zolk'", "'Qwert'", 
+		"'Blit'", "'Nyr'", "'Xyr'", "'Jyx'", "'Zyn'", "'Plor'", "'Flum'", "'Trax'", 
+		"'Zyx'", "'Glork'", "'Drax'", "'Skron'", "'Yttr'", "'Zarg'", "'Plux'", 
+		"'Mox'", "'Grat'", "'Krygn'", "'Zor'", "'Plip'", "'Blip'", "'Glip'", "'Flap'", 
+		"'Klix'", "'Vip'", "'Zinx'", "'Drox'", "'Grax'", "WS"
 	};
 	public static final int
 		RULE_program = 0, RULE_statement = 1, RULE_print = 2;
@@ -155,6 +156,7 @@ public class ParserTParser extends Parser {
 
 	public static class PrintContext extends ParserRuleContext {
 		public TerminalNode PRINT() { return getToken(ParserTParser.PRINT, 0); }
+		public TerminalNode ECUACIONES() { return getToken(ParserTParser.ECUACIONES, 0); }
 		public TerminalNode NUMERO() { return getToken(ParserTParser.NUMERO, 0); }
 		public PrintContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -173,14 +175,18 @@ public class ParserTParser extends Parser {
 	public final PrintContext print() throws RecognitionException {
 		PrintContext _localctx = new PrintContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_print);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(16); match(PRINT);
 			setState(17); match(T__1);
-			{
-			setState(18); match(NUMERO);
+			setState(18);
+			_la = _input.LA(1);
+			if ( !(_la==ECUACIONES || _la==NUMERO) ) {
+			_errHandler.recoverInline(this);
 			}
+			consume();
 			setState(19); match(T__0);
 			}
 		}
@@ -196,13 +202,13 @@ public class ParserTParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\38\30\4\2\t\2\4\3\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3:\30\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\3\2\3\2\6\2\13\n\2\r\2\16\2\f\3\2\3\2\3\3\3\3\3\4\3\4\3\4\3"+
-		"\4\3\4\3\4\2\2\5\2\4\6\2\2\25\2\b\3\2\2\2\4\20\3\2\2\2\6\22\3\2\2\2\b"+
-		"\n\7\21\2\2\t\13\5\4\3\2\n\t\3\2\2\2\13\f\3\2\2\2\f\n\3\2\2\2\f\r\3\2"+
-		"\2\2\r\16\3\2\2\2\16\17\7\22\2\2\17\3\3\2\2\2\20\21\5\6\4\2\21\5\3\2\2"+
-		"\2\22\23\7\23\2\2\23\24\7\3\2\2\24\25\7\5\2\2\25\26\7\4\2\2\26\7\3\2\2"+
-		"\2\3\f";
+		"\4\3\4\3\4\2\2\5\2\4\6\2\3\4\2\5\5\7\7\25\2\b\3\2\2\2\4\20\3\2\2\2\6\22"+
+		"\3\2\2\2\b\n\7\23\2\2\t\13\5\4\3\2\n\t\3\2\2\2\13\f\3\2\2\2\f\n\3\2\2"+
+		"\2\f\r\3\2\2\2\r\16\3\2\2\2\16\17\7\24\2\2\17\3\3\2\2\2\20\21\5\6\4\2"+
+		"\21\5\3\2\2\2\22\23\7\25\2\2\23\24\7\3\2\2\24\25\t\2\2\2\25\26\7\4\2\2"+
+		"\26\7\3\2\2\2\3\f";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
