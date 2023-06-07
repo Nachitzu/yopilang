@@ -7,7 +7,7 @@ desarrollo: pasos*;
 
 variables: texto | entero | decimal;
 texto: 'YttrPlor' VAR 'Draxzirjyxskronzir' TEXTO;
-entero: VAR 'Ser' ENTERO 'Bananas';
+entero: VAR 'PryxDrax' ENTERO 'asdf';
 decimal: VAR DECIMAL;
 
 pasos : escribir | operacion | leer;
