@@ -18,14 +18,14 @@ public class ParserTParser extends Parser {
 	public static final int
 		T__13=1, T__12=2, T__11=3, T__10=4, T__9=5, T__8=6, T__7=7, T__6=8, T__5=9, 
 		T__4=10, T__3=11, T__2=12, T__1=13, T__0=14, BEGIN=15, ONLIVE=16, END=17, 
-		PRINT=18, SCAN=19, VAR=20, TEXTO=21, ENTERO=22, DECIMAL=23, O=24, Y=25, 
-		WS=26, NUMERO=27;
+		PRINT=18, SCAN=19, VAR=20, TEXTO=21, NUMERO=22, ENTERO=23, DECIMAL=24, 
+		O=25, Y=26, WS=27;
 	public static final String[] tokenNames = {
 		"<INVALID>", "'PryxDrax'", "'Tynt('", "'Xynth'", "'Skorn'", "'Kryst'", 
 		"'Xyrt('", "'asdf'", "'YttrPlor'", "'Zynt('", "'Draxzirjyxskronzir'", 
 		"'('", "')'", "'Synt'", "'Thryp'", "'Xylok'", "'Onlik'", "'Zynd'", "'Plork'", 
-		"'Draxvokzirplor'", "VAR", "TEXTO", "ENTERO", "DECIMAL", "'o'", "'y'", 
-		"WS", "NUMERO"
+		"'Draxvokzirplor'", "VAR", "TEXTO", "NUMERO", "ENTERO", "DECIMAL", "'o'", 
+		"'y'", "WS"
 	};
 	public static final int
 		RULE_program = 0, RULE_constantes = 1, RULE_desarrollo = 2, RULE_variables = 3, 
@@ -526,10 +526,10 @@ public class ParserTParser extends Parser {
 	}
 
 	public static class MultiplicacionContext extends ParserRuleContext {
-		public TerminalNode ENTERO(int i) {
-			return getToken(ParserTParser.ENTERO, i);
+		public List<TerminalNode> NUMERO() { return getTokens(ParserTParser.NUMERO); }
+		public TerminalNode NUMERO(int i) {
+			return getToken(ParserTParser.NUMERO, i);
 		}
-		public List<TerminalNode> ENTERO() { return getTokens(ParserTParser.ENTERO); }
 		public MultiplicacionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -551,9 +551,9 @@ public class ParserTParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(82); match(T__3);
-			setState(83); match(ENTERO);
+			setState(83); match(NUMERO);
 			setState(84); match(T__0);
-			setState(85); match(ENTERO);
+			setState(85); match(NUMERO);
 			setState(86); match(T__2);
 			setState(87); match(T__1);
 			}
@@ -570,10 +570,10 @@ public class ParserTParser extends Parser {
 	}
 
 	public static class DivisionContext extends ParserRuleContext {
-		public TerminalNode ENTERO(int i) {
-			return getToken(ParserTParser.ENTERO, i);
+		public List<TerminalNode> NUMERO() { return getTokens(ParserTParser.NUMERO); }
+		public TerminalNode NUMERO(int i) {
+			return getToken(ParserTParser.NUMERO, i);
 		}
-		public List<TerminalNode> ENTERO() { return getTokens(ParserTParser.ENTERO); }
 		public DivisionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -595,9 +595,9 @@ public class ParserTParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(89); match(T__3);
-			setState(90); match(ENTERO);
+			setState(90); match(NUMERO);
 			setState(91); match(T__11);
-			setState(92); match(ENTERO);
+			setState(92); match(NUMERO);
 			setState(93); match(T__2);
 			setState(94); match(T__1);
 			}
@@ -614,10 +614,10 @@ public class ParserTParser extends Parser {
 	}
 
 	public static class SumaContext extends ParserRuleContext {
-		public TerminalNode ENTERO(int i) {
-			return getToken(ParserTParser.ENTERO, i);
+		public List<TerminalNode> NUMERO() { return getTokens(ParserTParser.NUMERO); }
+		public TerminalNode NUMERO(int i) {
+			return getToken(ParserTParser.NUMERO, i);
 		}
-		public List<TerminalNode> ENTERO() { return getTokens(ParserTParser.ENTERO); }
 		public SumaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -639,9 +639,9 @@ public class ParserTParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(96); match(T__3);
-			setState(97); match(ENTERO);
+			setState(97); match(NUMERO);
 			setState(98); match(T__9);
-			setState(99); match(ENTERO);
+			setState(99); match(NUMERO);
 			setState(100); match(T__2);
 			setState(101); match(T__1);
 			}
@@ -658,10 +658,10 @@ public class ParserTParser extends Parser {
 	}
 
 	public static class RestaContext extends ParserRuleContext {
-		public TerminalNode ENTERO(int i) {
-			return getToken(ParserTParser.ENTERO, i);
+		public List<TerminalNode> NUMERO() { return getTokens(ParserTParser.NUMERO); }
+		public TerminalNode NUMERO(int i) {
+			return getToken(ParserTParser.NUMERO, i);
 		}
-		public List<TerminalNode> ENTERO() { return getTokens(ParserTParser.ENTERO); }
 		public RestaContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -683,9 +683,9 @@ public class ParserTParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(103); match(T__3);
-			setState(104); match(ENTERO);
+			setState(104); match(NUMERO);
 			setState(105); match(T__10);
-			setState(106); match(ENTERO);
+			setState(106); match(NUMERO);
 			setState(107); match(T__2);
 			setState(108); match(T__1);
 			}
@@ -908,16 +908,16 @@ public class ParserTParser extends Parser {
 		"/\3\2\2\2\62\64\5\20\t\2\63\62\3\2\2\2\64\67\3\2\2\2\65\63\3\2\2\2\65"+
 		"\66\3\2\2\2\66\7\3\2\2\2\67\65\3\2\2\28<\5\n\6\29<\5\f\7\2:<\5\16\b\2"+
 		";8\3\2\2\2;9\3\2\2\2;:\3\2\2\2<\t\3\2\2\2=>\7\n\2\2>?\7\26\2\2?@\7\f\2"+
-		"\2@A\7\27\2\2A\13\3\2\2\2BC\7\3\2\2CD\7\30\2\2DE\7\t\2\2E\r\3\2\2\2FG"+
-		"\7\26\2\2GH\7\31\2\2H\17\3\2\2\2IM\5$\23\2JM\5\22\n\2KM\5\"\22\2LI\3\2"+
+		"\2@A\7\27\2\2A\13\3\2\2\2BC\7\3\2\2CD\7\31\2\2DE\7\t\2\2E\r\3\2\2\2FG"+
+		"\7\26\2\2GH\7\32\2\2H\17\3\2\2\2IM\5$\23\2JM\5\22\n\2KM\5\"\22\2LI\3\2"+
 		"\2\2LJ\3\2\2\2LK\3\2\2\2M\21\3\2\2\2NS\5\24\13\2OS\5\26\f\2PS\5\30\r\2"+
 		"QS\5\32\16\2RN\3\2\2\2RO\3\2\2\2RP\3\2\2\2RQ\3\2\2\2S\23\3\2\2\2TU\7\r"+
 		"\2\2UV\7\30\2\2VW\7\20\2\2WX\7\30\2\2XY\7\16\2\2YZ\7\17\2\2Z\25\3\2\2"+
 		"\2[\\\7\r\2\2\\]\7\30\2\2]^\7\5\2\2^_\7\30\2\2_`\7\16\2\2`a\7\17\2\2a"+
 		"\27\3\2\2\2bc\7\r\2\2cd\7\30\2\2de\7\7\2\2ef\7\30\2\2fg\7\16\2\2gh\7\17"+
 		"\2\2h\31\3\2\2\2ij\7\r\2\2jk\7\30\2\2kl\7\6\2\2lm\7\30\2\2mn\7\16\2\2"+
-		"no\7\17\2\2o\33\3\2\2\2pq\7\b\2\2qr\7\35\2\2rs\7\16\2\2s\35\3\2\2\2tu"+
-		"\7\13\2\2uv\7\35\2\2vw\7\16\2\2w\37\3\2\2\2xy\7\4\2\2yz\7\35\2\2z{\7\16"+
+		"no\7\17\2\2o\33\3\2\2\2pq\7\b\2\2qr\7\30\2\2rs\7\16\2\2s\35\3\2\2\2tu"+
+		"\7\13\2\2uv\7\30\2\2vw\7\16\2\2w\37\3\2\2\2xy\7\4\2\2yz\7\30\2\2z{\7\16"+
 		"\2\2{!\3\2\2\2|}\7\25\2\2}~\7\r\2\2~\177\7\16\2\2\177#\3\2\2\2\u0080\u0081"+
 		"\7\24\2\2\u0081%\3\2\2\2\7/\65;LR";
 	public static final ATN _ATN =

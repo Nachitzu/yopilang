@@ -13,10 +13,10 @@ decimal: VAR DECIMAL;
 pasos : escribir | operacion | leer;
 operacion:  multiplicacion | division| suma | resta;
 
-multiplicacion: '('ENTERO 'Thryp' ENTERO')''Synt';
-division: '(' ENTERO 'Xynth' ENTERO')' 'Synt';
-suma: '(' ENTERO 'Kryst' ENTERO')' 'Synt';
-resta: '(' ENTERO 'Skorn' ENTERO')' 'Synt';
+multiplicacion: '('NUMERO 'Thryp' NUMERO')''Synt';
+division: '(' NUMERO 'Xynth' NUMERO')' 'Synt';
+suma: '(' NUMERO 'Kryst' NUMERO')' 'Synt';
+resta: '(' NUMERO 'Skorn' NUMERO')' 'Synt';
 
 sin:'Xyrt('NUMERO')';
 cos:'Zynt('NUMERO')';
