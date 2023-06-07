@@ -8,25 +8,65 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface ParserTListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link ParserTParser#print}.
+	 * Enter a parse tree produced by {@link ParserTParser#suma}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrint(@NotNull ParserTParser.PrintContext ctx);
+	void enterSuma(@NotNull ParserTParser.SumaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ParserTParser#print}.
+	 * Exit a parse tree produced by {@link ParserTParser#suma}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrint(@NotNull ParserTParser.PrintContext ctx);
+	void exitSuma(@NotNull ParserTParser.SumaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ParserTParser#statement}.
+	 * Enter a parse tree produced by {@link ParserTParser#tan}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(@NotNull ParserTParser.StatementContext ctx);
+	void enterTan(@NotNull ParserTParser.TanContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ParserTParser#statement}.
+	 * Exit a parse tree produced by {@link ParserTParser#tan}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(@NotNull ParserTParser.StatementContext ctx);
+	void exitTan(@NotNull ParserTParser.TanContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#multiplicacion}.
+	 * @param ctx the parse tree
+	 */
+	void enterMultiplicacion(@NotNull ParserTParser.MultiplicacionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#multiplicacion}.
+	 * @param ctx the parse tree
+	 */
+	void exitMultiplicacion(@NotNull ParserTParser.MultiplicacionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#variables}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariables(@NotNull ParserTParser.VariablesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#variables}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariables(@NotNull ParserTParser.VariablesContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#cos}.
+	 * @param ctx the parse tree
+	 */
+	void enterCos(@NotNull ParserTParser.CosContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#cos}.
+	 * @param ctx the parse tree
+	 */
+	void exitCos(@NotNull ParserTParser.CosContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#entero}.
+	 * @param ctx the parse tree
+	 */
+	void enterEntero(@NotNull ParserTParser.EnteroContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#entero}.
+	 * @param ctx the parse tree
+	 */
+	void exitEntero(@NotNull ParserTParser.EnteroContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ParserTParser#program}.
 	 * @param ctx the parse tree
@@ -37,4 +77,114 @@ public interface ParserTListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitProgram(@NotNull ParserTParser.ProgramContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#operacion}.
+	 * @param ctx the parse tree
+	 */
+	void enterOperacion(@NotNull ParserTParser.OperacionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#operacion}.
+	 * @param ctx the parse tree
+	 */
+	void exitOperacion(@NotNull ParserTParser.OperacionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#constantes}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstantes(@NotNull ParserTParser.ConstantesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#constantes}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstantes(@NotNull ParserTParser.ConstantesContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#texto}.
+	 * @param ctx the parse tree
+	 */
+	void enterTexto(@NotNull ParserTParser.TextoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#texto}.
+	 * @param ctx the parse tree
+	 */
+	void exitTexto(@NotNull ParserTParser.TextoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#division}.
+	 * @param ctx the parse tree
+	 */
+	void enterDivision(@NotNull ParserTParser.DivisionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#division}.
+	 * @param ctx the parse tree
+	 */
+	void exitDivision(@NotNull ParserTParser.DivisionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#leer}.
+	 * @param ctx the parse tree
+	 */
+	void enterLeer(@NotNull ParserTParser.LeerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#leer}.
+	 * @param ctx the parse tree
+	 */
+	void exitLeer(@NotNull ParserTParser.LeerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#escribir}.
+	 * @param ctx the parse tree
+	 */
+	void enterEscribir(@NotNull ParserTParser.EscribirContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#escribir}.
+	 * @param ctx the parse tree
+	 */
+	void exitEscribir(@NotNull ParserTParser.EscribirContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#desarrollo}.
+	 * @param ctx the parse tree
+	 */
+	void enterDesarrollo(@NotNull ParserTParser.DesarrolloContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#desarrollo}.
+	 * @param ctx the parse tree
+	 */
+	void exitDesarrollo(@NotNull ParserTParser.DesarrolloContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#sin}.
+	 * @param ctx the parse tree
+	 */
+	void enterSin(@NotNull ParserTParser.SinContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#sin}.
+	 * @param ctx the parse tree
+	 */
+	void exitSin(@NotNull ParserTParser.SinContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#resta}.
+	 * @param ctx the parse tree
+	 */
+	void enterResta(@NotNull ParserTParser.RestaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#resta}.
+	 * @param ctx the parse tree
+	 */
+	void exitResta(@NotNull ParserTParser.RestaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#decimal}.
+	 * @param ctx the parse tree
+	 */
+	void enterDecimal(@NotNull ParserTParser.DecimalContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#decimal}.
+	 * @param ctx the parse tree
+	 */
+	void exitDecimal(@NotNull ParserTParser.DecimalContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ParserTParser#pasos}.
+	 * @param ctx the parse tree
+	 */
+	void enterPasos(@NotNull ParserTParser.PasosContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#pasos}.
+	 * @param ctx the parse tree
+	 */
+	void exitPasos(@NotNull ParserTParser.PasosContext ctx);
 }

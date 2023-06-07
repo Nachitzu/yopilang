@@ -18,6 +18,10 @@ division: '(' ENTERO 'Xynth' ENTERO')' 'Synt';
 suma: '(' ENTERO 'Kryst' ENTERO')' 'Synt';
 resta: '(' ENTERO 'Skorn' ENTERO')' 'Synt';
 
+sin:'Xyrt('NUMERO')';
+cos:'Zynt('NUMERO')';
+tan:'Tynt('NUMERO')';
+
 
 leer : SCAN '(' ')';
 
