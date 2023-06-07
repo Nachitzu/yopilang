@@ -27,6 +27,11 @@ operadores: Mayoht| Menhok ;
 Mayoht: VAR 'Mayoht' VAR;
 Menhok: VAR 'Menhok' VAR;
 
+NULL: 'NULL';
+PI: '3,1415';
+PITUFINUMERO: '1,58';
+EULER: '2,71828';
+
 leer : SCAN '(' ')';
 
 escribir : PRINT;
