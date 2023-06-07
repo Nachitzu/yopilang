@@ -11,7 +11,7 @@ entero:  'PryxDrax' ENTERO 'asdf';
 decimal: VAR DECIMAL;
 
 pasos : escribir | operacion | leer;
-operacion:  multiplicacion | division| suma | resta;
+operacion:  multiplicacion | division| suma | resta|si|mientras|para;
 
 
 multiplicacion: '('ENTERO 'Thryp' ENTERO')''Synt';
@@ -20,6 +20,7 @@ suma: '(' ENTERO 'Kryst' ENTERO')' 'Synt';
 resta: '(' ENTERO 'Skorn' ENTERO')' 'Synt';
 
 para:'('VAR 'Synt' ENTERO ';' VAR operadores ENTERO ';' VAR 'KrystKryst)';
+si:'('VAR 'SyntSynt' VAR ')' 'Qwertzirvokpryxglork';
 mientras: 'Zyxblippryxplorskronglorkzirdrax(' logica ')' desarrollo 'Qwertzirvokpryxglork'; 
 logica: operadores ((O|Y) operadores)*;
 operadores: Mayoht| Menhok ;
