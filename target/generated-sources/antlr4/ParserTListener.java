@@ -18,16 +18,6 @@ public interface ParserTListener extends ParseTreeListener {
 	 */
 	void exitSuma(@NotNull ParserTParser.SumaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ParserTParser#tan}.
-	 * @param ctx the parse tree
-	 */
-	void enterTan(@NotNull ParserTParser.TanContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link ParserTParser#tan}.
-	 * @param ctx the parse tree
-	 */
-	void exitTan(@NotNull ParserTParser.TanContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link ParserTParser#multiplicacion}.
 	 * @param ctx the parse tree
 	 */
@@ -48,15 +38,15 @@ public interface ParserTListener extends ParseTreeListener {
 	 */
 	void exitVariables(@NotNull ParserTParser.VariablesContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ParserTParser#cos}.
+	 * Enter a parse tree produced by {@link ParserTParser#operadores}.
 	 * @param ctx the parse tree
 	 */
-	void enterCos(@NotNull ParserTParser.CosContext ctx);
+	void enterOperadores(@NotNull ParserTParser.OperadoresContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ParserTParser#cos}.
+	 * Exit a parse tree produced by {@link ParserTParser#operadores}.
 	 * @param ctx the parse tree
 	 */
-	void exitCos(@NotNull ParserTParser.CosContext ctx);
+	void exitOperadores(@NotNull ParserTParser.OperadoresContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ParserTParser#entero}.
 	 * @param ctx the parse tree
@@ -118,6 +108,16 @@ public interface ParserTListener extends ParseTreeListener {
 	 */
 	void exitDivision(@NotNull ParserTParser.DivisionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ParserTParser#logica}.
+	 * @param ctx the parse tree
+	 */
+	void enterLogica(@NotNull ParserTParser.LogicaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#logica}.
+	 * @param ctx the parse tree
+	 */
+	void exitLogica(@NotNull ParserTParser.LogicaContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ParserTParser#leer}.
 	 * @param ctx the parse tree
 	 */
@@ -148,15 +148,15 @@ public interface ParserTListener extends ParseTreeListener {
 	 */
 	void exitDesarrollo(@NotNull ParserTParser.DesarrolloContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link ParserTParser#sin}.
+	 * Enter a parse tree produced by {@link ParserTParser#mientras}.
 	 * @param ctx the parse tree
 	 */
-	void enterSin(@NotNull ParserTParser.SinContext ctx);
+	void enterMientras(@NotNull ParserTParser.MientrasContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link ParserTParser#sin}.
+	 * Exit a parse tree produced by {@link ParserTParser#mientras}.
 	 * @param ctx the parse tree
 	 */
-	void exitSin(@NotNull ParserTParser.SinContext ctx);
+	void exitMientras(@NotNull ParserTParser.MientrasContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link ParserTParser#resta}.
 	 * @param ctx the parse tree

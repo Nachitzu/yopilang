@@ -28,18 +28,6 @@ public class ParserTBaseListener implements ParserTListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTan(@NotNull ParserTParser.TanContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTan(@NotNull ParserTParser.TanContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterMultiplicacion(@NotNull ParserTParser.MultiplicacionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -64,13 +52,13 @@ public class ParserTBaseListener implements ParserTListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCos(@NotNull ParserTParser.CosContext ctx) { }
+	@Override public void enterOperadores(@NotNull ParserTParser.OperadoresContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCos(@NotNull ParserTParser.CosContext ctx) { }
+	@Override public void exitOperadores(@NotNull ParserTParser.OperadoresContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -148,6 +136,18 @@ public class ParserTBaseListener implements ParserTListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLogica(@NotNull ParserTParser.LogicaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLogica(@NotNull ParserTParser.LogicaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLeer(@NotNull ParserTParser.LeerContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -184,13 +184,13 @@ public class ParserTBaseListener implements ParserTListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSin(@NotNull ParserTParser.SinContext ctx) { }
+	@Override public void enterMientras(@NotNull ParserTParser.MientrasContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSin(@NotNull ParserTParser.SinContext ctx) { }
+	@Override public void exitMientras(@NotNull ParserTParser.MientrasContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
