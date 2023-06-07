@@ -1,24 +1,28 @@
 grammar ParserT;
 import LexerT;
 
-program   : BEGIN constantes ONLIVE desarrollo END;
-constantes: variables*;
-desarrollo: pasos*;
+program: INT MAIN BRACE_OPEN codigo* BRACE_CLOSE ((INT | CHAR | REAL | VOID | BOOLEAN) NAME_VAR BRACE_OPEN codigo* BRACE_CLOSE)* ;
 
-variables: texto | entero | decimal;
-texto: 'YttrPlor' VAR 'Draxzirjyxskronzir' TEXTO;
-entero: VAR 'PryxDrax' ENTERO 'asdf';
-decimal: VAR DECIMAL;
+codigo: declaracion | escribir | leer | si | hacer_mientras | mientras | para ;
 
-pasos : escribir | operacion | leer;
-operacion:  multiplicacion | division| suma | resta;
+declaracion: CONSTANT? CHAR NAME_VAR (ASSIGN (NAME_VAR | NUMBER))? SEMICOLON |
+		     CONSTANT? INT NAME_VAR (ASSIGN NUMBER)? SEMICOLON |
+		     CONSTANT? REAL NAME_VAR (ASSIGN NAME_VAR)? SEMICOLON |
+		     CONSTANT? BOOLEAN NAME_VAR (ASSIGN VAL_BOOLEAN)? SEMICOLON ;
 
-multiplicacion: '(' VAR 'Thryp' VAR')' 'Synt';
-division: '(' VAR 'Xynth' VAR')' 'Synt';
-suma: '(' VAR 'Kryst' VAR')' 'Synt';
-resta: '(' VAR 'Skorn' VAR')' 'Synt';
+escribir: PRINT PAR_OPEN WORDS PAR_CLOSE SEMICOLON ;
+
+leer: READ PAR_OPEN NAME_VAR PAR_CLOSE SEMICOLON ;
+
+si: IF PAR_OPEN condicion PAR_CLOSE BRACE_OPEN bloque BRACE_CLOSE (ELSE BRACE_OPEN bloque BRACE_CLOSE)? ;
+
+hacer_mientras: DO BRACE_OPEN bloque BRACE_CLOSE WHILE PAR_OPEN condicion PAR_CLOSE SEMICOLON ;
+
+mientras: WHILE PAR_OPEN condicion PAR_CLOSE BRACE_OPEN bloque BRACE_CLOSE ;
+
+para: FOR PAR_OPEN (declaracion | NAME_VAR)? COMMA condicion COMMA calculo PAR_CLOSE BRACE_OPEN bloque BRACE_CLOSE ;
 
 
-leer : SCAN '(' ')';
-
-escribir : PRINT VAR ;
+calculo: NAME_VAR | NUMBER | calculo (PLUS | MINUS | MULT | DIV | MOD | POW) calculo ;
+condicion: NAME_VAR | NUMBER | condicion (GREATER | LESSER | GREATER_OR_EQUAL | LESSER_OR_EQUAL | EQUAL | NOT_EQUAL) condicion ;
+bloque: codigo+ ;
