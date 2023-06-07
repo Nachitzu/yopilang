@@ -136,6 +136,18 @@ public class ParserTBaseListener implements ParserTListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterPara(@NotNull ParserTParser.ParaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPara(@NotNull ParserTParser.ParaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLogica(@NotNull ParserTParser.LogicaContext ctx) { }
 	/**
 	 * {@inheritDoc}

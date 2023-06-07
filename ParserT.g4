@@ -13,11 +13,13 @@ decimal: VAR DECIMAL;
 pasos : escribir | operacion | leer;
 operacion:  multiplicacion | division| suma | resta;
 
+
 multiplicacion: '('ENTERO 'Thryp' ENTERO')''Synt';
 division: '(' ENTERO 'Xynth' ENTERO')' 'Synt';
 suma: '(' ENTERO 'Kryst' ENTERO')' 'Synt';
 resta: '(' ENTERO 'Skorn' ENTERO')' 'Synt';
 
+para:'('VAR 'Synt' ENTERO ';' VAR operadores ENTERO ';' VAR 'KrystKryst)';
 mientras: 'Zyxblippryxplorskronglorkzirdrax(' logica ')' desarrollo 'Qwertzirvokpryxglork'; 
 logica: operadores ((O|Y) operadores)*;
 operadores: Mayoht| Menhok ;

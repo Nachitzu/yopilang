@@ -108,6 +108,16 @@ public interface ParserTListener extends ParseTreeListener {
 	 */
 	void exitDivision(@NotNull ParserTParser.DivisionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ParserTParser#para}.
+	 * @param ctx the parse tree
+	 */
+	void enterPara(@NotNull ParserTParser.ParaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ParserTParser#para}.
+	 * @param ctx the parse tree
+	 */
+	void exitPara(@NotNull ParserTParser.ParaContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ParserTParser#logica}.
 	 * @param ctx the parse tree
 	 */
